@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercicio 5</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		function Pessoa(nome, sobrenome, idade) {
+			this.nome = nome;
+			this.sobrenome = sobrenome;
+			this.idade = idade;
+		};
+
+		function Professor(nome, sobrenome, idade, especialidade) {
+			Pessoa.call(this, nome, sobrenome, idade);
+			this.especialidade = especialidade;
+		};
+
+		Professor.prototype = new Pessoa();
+		Professor.prototype.constructor = Professor;
+
+		Professor.prototype.ensinar = function(materia) {
+			console.log(this.nome + " está ensinando " + materia);
+		};
+
+		var joao = new Professor('João', 'Costa', 26, 'Matemática');
+		joao.ensinar('matemática');
+
+	</script>
+</body>
+</html>
