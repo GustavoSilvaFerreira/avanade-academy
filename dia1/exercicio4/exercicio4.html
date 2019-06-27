@@ -6,17 +6,29 @@
 <body>
 	<script type="text/javascript">
 
+		// filter
 		function dropElements(arr, f) {
 			return arr.filter(f);
 		}
 
+		// manual
+		function removeEl(arr, f) {
+			var filtrados = [];
+			for(var i = 0; i < arr.length; i++) {
+				if(f(arr[i])) {
+					filtrados.push(arr[i]);
+				}
+			}
+
+			return filtrados;
+		}
 		
-		console.log(dropElements([1, 2, 3, 4], function(n) {return n >= 3}));
-		console.log(dropElements([0, 1, 0, 1], function(n) {return n === 1}));
-		console.log(dropElements([1, 2, 3], function(n) {return n > 0}));
-		console.log(dropElements([1, 2, 3, 4], function(n) {return n > 5}));
-		console.log(dropElements([1, 2, 3, 7, 4], function(n) {return n > 3}));
-		console.log(dropElements([1, 2, 3, 9, 2], function(n) {return n > 2}));
+		console.log(removeEl([1, 2, 3, 4], function(n) {return n >= 3}));
+		console.log(removeEl([0, 1, 0, 1], function(n) {return n === 1}));
+		console.log(removeEl([1, 2, 3], function(n) {return n > 0}));
+		console.log(removeEl([1, 2, 3, 4], function(n) {return n > 5}));
+		console.log(removeEl([1, 2, 3, 7, 4], function(n) {return n > 3}));
+		console.log(removeEl([1, 2, 3, 9, 2], function(n) {return n > 2}));
 
 	</script>
 </body>
