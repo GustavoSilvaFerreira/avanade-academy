@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercicio 2</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function somaValores(somarTodos) {
+			if(somarTodos.length != 2) {
+				console.log('Quantidade de parâmetros inválidos.');
+				return false;
+			}
+
+			var menor = null;
+			var maior = null;
+
+			if(somarTodos[0] < somarTodos[1]) {
+				menor = somarTodos[0];
+				maior = somarTodos[1];
+			} else {
+				menor = somarTodos[1];
+				maior = somarTodos[0];
+			}
+
+			var soma = 0;
+			for(var qtd = menor; qtd <= maior; qtd++) {
+				soma = soma + qtd;
+			}
+
+			console.log(soma);
+		}
+
+		somaValores([1, 4]);
+		somaValores([4, 1]);
+		somaValores([5, 10]);
+		somaValores([10, 5]);
+		somaValores([10]);
+
+	</script>
+</body>
+</html>
