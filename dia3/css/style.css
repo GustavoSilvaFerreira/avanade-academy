@@ -1,0 +1,23 @@
+#displayFlex {
+	display: flex;
+	height: 500px;
+	justify-content: space-around;
+	align-items: stretch;
+}
+
+#contagem {
+	width: 100%;
+	background: #e4cf13;
+	
+}
+
+#foguete {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	width: 100%;
+}
+
+.foguete {
+	width: 30%;
+}
