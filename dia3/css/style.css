@@ -1,14 +1,22 @@
 #displayFlex {
 	display: flex;
-	height: 500px;
 	justify-content: space-around;
 	align-items: stretch;
 }
 
 #contagem {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	background: #e4cf13;
-	
+}
+
+#tempo {
+	border-radius: 10px;
+	margin-bottom: 10px;
+	text-align: center;
 }
 
 #foguete {
@@ -18,6 +26,7 @@
 	width: 100%;
 }
 
-.foguete {
-	width: 30%;
+#imagemFoguete {
+	width: 20%;
+	position: absolute;
 }

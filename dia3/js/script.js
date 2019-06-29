@@ -1,14 +1,20 @@
-var screenHeight = screen.height;
+var screenHeight = window.innerHeight;
 var displayFlex = document.getElementById('displayFlex');
-displayFlex.style.height = screenHeight;
+displayFlex.style.height = screenHeight + 'px';
 
 function dispararFoguete() {
-	var foguete = document.getElementById('foguete');
-	var posicao = ['center','flex-start'];
+	var foguete = document.getElementById('imagemFoguete');
+	var posicao = foguete.offsetTop;
 
-	for(var i = 0; i < 2; i++) {
-		foguete.style.alignItems = posicao[i];	
-	}
+	var intervalo = setInterval(function() {
+		if(posicao > 0) {
+			posicao --;
+			foguete.style.top = posicao + 'px';
+		} else {
+			clearInterval(intervalo);
+			alert('Foguete lançado com sucesso!!!');
+		}
+	}, 3);
 }
 
 var start = document.getElementById('clicou');
@@ -22,7 +28,6 @@ start.addEventListener('click', function() {
 			if(tempo === 0) {
 				clearInterval(IntervalId);
 				dispararFoguete();
-				alert('Foguete lançado com sucesso!!!');
 			}
 
 			tempo--;
