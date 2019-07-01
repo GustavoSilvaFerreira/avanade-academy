@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Es6 - iterações</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var alunos = [
+            {nome: 'Felipe M.', sexo: 'M', idade: 13},
+            {nome: 'Luíza A.', sexo: 'F', idade: 14},
+            {nome: 'Marcos T.', sexo: 'M', idade: 14},
+            {nome: 'Bianca B.', sexo: 'F', idade: 13},
+            {nome: 'Rogério R.', sexo: 'M', idade: 15},
+        ];
+
+        // listar na tela todos os nomes
+        alunos.forEach(function(a) {
+            console.log(a.nome);
+        });
+
+        // dobrem a  idade
+        var alunosIdadeDobrada = alunos.map(function(a) {
+            return a.idade * 2;
+        });
+        console.log(alunosIdadeDobrada);
+
+        // filtrar somente para o sexo F
+        var alunosFemino = alunos.filter(function(a) {
+            return a.sexo === 'F';
+        });
+        console.log(alunosFemino);
+
+        // encontrar um registro (Bianca B.)
+        var alunoBiancaB = alunos.find(function(a) {
+            return a.nome === 'Bianca B.';
+        });
+        console.log(alunoBiancaB);
+
+        // verificar se TODOS atendem critério (idade > 14)
+        var alunosAtendemTodosCriterios = alunos.every(function(a) {
+            return a.idade > 14;
+        });
+        console.log(alunosAtendemTodosCriterios);
+
+        // verificar se alguma atende critério de ter maior de 18 anos ( idade > 18)
+        var algumAlunoMaior18 = alunos.some(function(a) {
+            return a.idade > 18;
+        });
+        console.log(algumAlunoMaior18);
+
+	</script>
+</body>
+</html>
