@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	background: #ccc;
+}
+
+#displayFlex {
+	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
+	height: 100vh;
+}
+
+#pokemons {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	background: #e4cf13;
+}
+
+#abilities {
+	display: flex;
+	justify-content: center;
+	align-items: space-around;
+	width: 100%;
+}
+
+.abilities {
+	color: #001ba8;
+	font-weight: bold;
+}
