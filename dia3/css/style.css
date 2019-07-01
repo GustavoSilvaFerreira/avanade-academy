@@ -1,7 +1,13 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 #displayFlex {
 	display: flex;
 	justify-content: space-around;
 	align-items: stretch;
+	height: 100vh;
 }
 
 #contagem {
@@ -17,6 +23,7 @@
 	border-radius: 10px;
 	margin-bottom: 10px;
 	text-align: center;
+	padding: 2%;
 }
 
 #foguete {
@@ -29,4 +36,16 @@
 #imagemFoguete {
 	width: 20%;
 	position: absolute;
+}
+
+#clicou {
+	background: #04aa12;
+	padding: 2%;
+	border: 1px solid #04aa12;
+	cursor: pointer;
+}
+
+#temporizador {
+	color: #fff;
+	padding: 2%;
 }

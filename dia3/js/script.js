@@ -1,7 +1,3 @@
-var screenHeight = window.innerHeight;
-var displayFlex = document.getElementById('displayFlex');
-displayFlex.style.height = screenHeight + 'px';
-
 function dispararFoguete() {
 	var foguete = document.getElementById('imagemFoguete');
 	var posicao = foguete.offsetTop;
